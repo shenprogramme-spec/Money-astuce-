@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>AstuceVrai | Conseils utiles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Astuces pratiques, opportunités légales et technologie utile.">
+
+<!-- Google AdSense (à activer après acceptation) -->
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3683140977556078"
+crossorigin="anonymous"></script>
+
+
+<style>
+:root{
+  --main:#2563eb;
+  --dark:#1e293b;
+  --light:#f8fafc;
+  --gray:#64748b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Segoe UI, Arial, sans-serif;
+  background:var(--light);
+  color:var(--dark);
+}
+
+/* HEADER */
+header{
+  background:linear-gradient(135deg,#2563eb,#1e40af);
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+}
+
+/* NAV */
+nav{
+  background:#fff;
+  box-shadow:0 2px 8px rgba(0,0,0,.1);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+nav ul{
+  list-style:none;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:10px;
+  margin:0;
+}
+nav a{
+  text-decoration:none;
+  font-weight:600;
+  color:var(--dark);
+}
+
+/* SECTIONS */
+section{
+  display:none;
+}
+section.active{
+  display:block;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:40px 20px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#fff;
+  padding:20px;
+  border-radius:10px;
+  box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.btn{
+  background:var(--main);
+  color:#fff;
+  border:none;
+  padding:10px 15px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+input, textarea{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  border-radius:6px;
+  border:1px solid #cbd5f5;
+}
+
+.ads{
+  background:#e2e8f0;
+  padding:25px;
+  text-align:center;
+  border-radius:10px;
+  color:var(--gray);
+}
+
+footer{
+  background:var(--dark);
+  color:#cbd5f5;
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>AstuceVrai</h1>
+  <p>Des conseils simples, honnêtes et utiles</p>
+</header>
+
+<nav>
+<ul>
+  <li><a href="#" onclick="showPage('accueil')">Accueil</a></li>
+  <li><a href="#" onclick="showPage('astuces')">Astuces</a></li>
+  <li><a href="#" onclick="showPage('opportunites')">Opportunités</a></li>
+  <li><a href="#" onclick="showPage('tech')">Technologie</a></li>
+  <li><a href="#" onclick="showPage('contact')">Contact</a></li>
+</ul>
+</nav>
+
+<!-- ACCUEIL -->
+<section id="accueil" class="active">
+  <div class="container grid">
+    <div class="card">💡 Astuces pratiques du quotidien</div>
+    <div class="card">💼 Opportunités légales et réalistes</div>
+    <div class="card">📱 Technologie utile pour tous</div>
+  </div>
+</section>
+
+<!-- ASTUCES -->
+<section id="astuces">
+  <div class="container">
+    <h2>📌 Astuces pratiques</h2>
+    <div class="grid">
+      <div class="card">Économiser de l’argent chaque mois</div>
+      <div class="card">Mieux gérer son temps</div>
+      <div class="card">Éviter les erreurs courantes</div>
+    </div>
+  </div>
+</section>
+
+<!-- ADS -->
+<div class="container">
+  <div class="ads">📢 Emplacement Google AdSense</div>
+</div>
+
+<!-- OPPORTUNITÉS -->
+<section id="opportunites">
+  <div class="container">
+    <h2>💼 Opportunités légales</h2>
+    <div class="grid">
+      <div class="card">Petits jobs en ligne fiables</div>
+      <div class="card">Applications utiles et honnêtes</div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNO -->
+<section id="tech">
+  <div class="container">
+    <h2>📱 Technologie utile</h2>
+    <div class="grid">
+      <div class="card">Outils gratuits</div>
+      <div class="card">Apprendre avec Internet</div>
+    </div>
+    <br>
+    <button class="btn" onclick="shareSite()">Partager avec mes amis</button>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="card">
+      <h2>📩 Contact</h2>
+
+      <form action="https://formspree.io/f/https://formspree.io/f/xnjbalvq" method="POST">
+        <input type="text" name="nom" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+        <button class="btn" type="submit">Envoyer</button>
+      </form>
+
+      <p style="font-size:13px;color:#64748b;margin-top:10px;">
+        Aucune promesse de gains financiers.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 AstuceVrai – Tous droits réservés
+</footer>
+
+<script>
+function showPage(pageId){
+  document.querySelectorAll("section").forEach(sec=>{
+    sec.classList.remove("active");
+  });
+  document.getElementById(pageId).classList.add("active");
+}
+
+function shareSite(){
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent("Découvre ce site d’astuces utiles 👇");
+  window.open("https://wa.me/?text=" + text + "%20" + url, "_blank");
+}
+</script>
+
+</body>
+</html>
